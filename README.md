@@ -14,7 +14,7 @@ Here's the parts I use when building this myself:
 
 **3.3v Linear Regulator**: [DigiKey Part 296-21633-5-ND](http://www.digikey.com/product-detail/en/UA78M33CKCS/296-21633-5-ND/1494026)
 
-With these regulators you can run about 1A through the 5v output and 0.5A through the 3.3v output.
+With these regulators you can run about 1.5A through the 5v output and 0.5A through the 3.3v output.
 If you go that high you should seriously think about adding 
 [heat sinks](http://www.digikey.com/product-search/en/fans-thermal-management/thermal-heat-sinks/1179752) 
 to the regulators.
