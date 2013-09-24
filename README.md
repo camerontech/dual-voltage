@@ -17,4 +17,4 @@ Here's the parts I use when building this myself:
 With these regulators you can run about 1.5A through the 5v output and 0.5A through the 3.3v output.
 If you go that high you should seriously think about adding 
 [heat sinks](http://www.digikey.com/product-search/en/fans-thermal-management/thermal-heat-sinks/1179752) 
-to the regulators.
+to the regulators. To figure out how much power you're going to turn into heat, check this out: https://www.sparkfun.com/tutorials/217
