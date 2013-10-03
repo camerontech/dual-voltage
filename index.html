@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dual Voltage Regulator by camerontech</title>
+    <title>Cameron Tech Dual Voltage Regulator by camerontech</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,8 +15,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Dual Voltage Regulator</h1>
-        <p>&lt;20v in, 5v &amp; 3.3v out</p>
+        <h1>Cameron Tech Dual Voltage Regulator</h1>
+        <p>When you absolutely, positively need both 5v and 3.3v right now.</p>
 
         <p class="view"><a href="https://github.com/camerontech/dual-voltage">View the Project on GitHub <small>camerontech/dual-voltage</small></a></p>
 
@@ -29,36 +29,50 @@
       </header>
       <section>
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="what-is-this" class="anchor" href="#what-is-this"><span class="octicon octicon-link"></span></a>What is this?</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>The Dual Regulator is just that: two regulators in one package. I found that I need to supply both 5v to an Arduino (without its own voltage regulator) and 3.3v to attached sensors <em>at the same time</em>. I couldn't find any products out there that would do that for me, so I made one.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Want to get your hands on one? You can do that right here: <a href="http://store.camerontech.io/products/dual-regulator">http://store.camerontech.io/products/dual-regulator</a></p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="assembly" class="anchor" href="#assembly"><span class="octicon octicon-link"></span></a>Assembly</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Make sure that you have all the required parts. If anything is missing send an email to <a href="mailto:support@camerontech.io">support@camerontech.io</a> and let me know.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ul>
+<li>1 x Circuit board</li>
+<li>1 x 5v linear voltage regulator (will have the number "7805" printed on it somewhere)</li>
+<li>1 x 3.3v linear voltage regulator (will have some numbers including "33")</li>
+<li>4 x 10µF electrolytic capacitors (the cylinders with the long legs)</li>
+<li>2 x 0.1µF ceramic capacitors (the tiny orange things)</li>
+<li>3 x 2-pin standoff headers (the metal pins in the black brackets, may be grouped together as 6 pins)</li>
+</ul><h4>
+<a name="the-capacitors" class="anchor" href="#the-capacitors"><span class="octicon octicon-link"></span></a>The capacitors</h4>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>We're going to start by soldering in the smallest components first. Put the two 0.1µF capacitors through the center holes of the board and bend the pins a bit so they'll stay put when you flip the board over. Go ahead and solder those in place and clip off the excess wire.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Next comes the 10µF capacitors. It's very important that you install these in the correct direction or they'll be ruined once you turn on the power. The circles printed on the board have a tiny - (minus) sign on them if you look closely. The <strong>short</strong> leg of the capacitor should go through this hole. Place all four through the holes first and then double check: the capacitor body has a lighter stripe on the same side as the sort leg. All of the stripes should face inwards towards the middle of the board. If everything looks good, get to soldering. Trim off the extra legs when you're done.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h4>
+<a name="the-regulators" class="anchor" href="#the-regulators"><span class="octicon octicon-link"></span></a>The regulators</h4>
+
+<p>Now the important parts: the regulators. You'll place these so that the black bodies face each other towards the center of the board and the silver backings (heatsinks) face outwards. On the board you'll see a tiny "5v" and "3.3v" inside the boxes for the regulators. Make sure you put the regulator that has "7805" printed on it into the 5v box and the regulator that has "33" printed on it into the other box. (If you get these backwards it won't actually be the end of the world, you just need to remember that the output pins labeled "5V" and "3.3V" are backwards.) Once you have them in place you'll probably want to bend the legs a bit to get them to stay there. If you're particularly fastidious about having everything be vertical when you're done you may want to use a little scotch tape or an extra pair of hands to hold everything plumb and level as you're soldering. Clip off the extra length of legs.</p>
+
+<h4>
+<a name="mounting-options" class="anchor" href="#mounting-options"><span class="octicon octicon-link"></span></a>Mounting options</h4>
+
+<p>If you want to mount this thing in a breadboard then now's the time to clip your header pins into groups of two and solder them in the remaining holes, long ends of the pins facing down. If you'd like the board to sit on a table and be able to plug jumpers into them from the top, mount the header pins with the long ends facing up. Or, if you just want to hardwire wires right to the inputs and outputs, feel free!</p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Having trouble? Shoot me an email at <a href="mailto:support@camerontech.io">support@camerontech.io</a> and I'll do my best to help you out!</p>
+
+<h3>
+<a name="more-details" class="anchor" href="#more-details"><span class="octicon octicon-link"></span></a>More details</h3>
+
+<p>The Dual Regulator is open source hardware under the <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons BY-SA 3.0 license</a>. This means the schematics and board layouts are available for you to do what you like. You can get the board fabricated yourself or even modify the design and sell it if you want. I only ask that you then also open source your design and mention where you got the originals.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/camerontech">camerontech</a></p>
@@ -66,6 +80,16 @@ $ git checkout gh-pages
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-164680-23");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
