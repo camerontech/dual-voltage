@@ -221,6 +221,10 @@ footer {
     right:50px;
     top:52px;
   }
+  img {
+    width: 31%;
+    margin-right: 1%;
+  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -239,10 +243,7 @@ footer {
   pre, code {
     word-wrap:normal;
   }
-  img {
-    width: 31%;
-    margin-right: 1%;
-  }
+
 }
 
 @media print, screen and (max-width: 480px) {
